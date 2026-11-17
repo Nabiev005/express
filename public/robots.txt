@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://evakuator-team.kg/sitemap.xml

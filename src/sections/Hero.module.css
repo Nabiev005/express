@@ -1,0 +1,29 @@
+.hero { position: relative; overflow: hidden; padding-block: clamp(3.2rem, 7vw, 6.5rem) 4rem; background: radial-gradient(ellipse at 83% 44%, rgb(255 182 41 / 7%), transparent 34%), var(--color-ink); }
+.inner { display: grid; grid-template-columns: minmax(0, .94fr) minmax(0, 1.06fr); align-items: center; gap: clamp(1rem, 3vw, 3rem); }
+.content { position: relative; z-index: 1; }
+.content h1 { max-width: 650px; margin-bottom: 1.35rem; }
+.content h1 span { color: var(--color-brand); }
+.description { max-width: 520px; color: var(--color-text-muted); font-size: var(--fs-lg); }
+.points { display: grid; gap: .75rem; margin: 1.75rem 0 2rem; padding: 0; list-style: none; }
+.points li { display: flex; align-items: flex-start; gap: .65rem; color: #e2e5e4; font-size: var(--fs-sm); }
+.points svg { width: 20px; height: 20px; flex: 0 0 auto; margin-top: .12rem; padding: 3px; border-radius: 50%; background: rgb(255 182 41 / 15%); color: var(--color-brand); }
+.actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+.trust { display: flex; align-items: center; gap: .8rem; margin-top: 2rem; color: var(--color-text-muted); font-size: var(--fs-xs); }
+.trust b { color: var(--color-text); }
+.avatars { display: flex; padding-left: 4px; }
+.avatars i { display: grid; width: 28px; height: 28px; margin-left: -4px; place-items: center; border: 2px solid var(--color-ink); border-radius: 50%; background: #394244; color: white; font-size: 10px; font-style: normal; font-weight: 700; }
+.avatars i:nth-child(2) { background: #99724d; }.avatars i:nth-child(3) { background: #61735e; }
+.visual { position: relative; }
+.visual img { position: relative; width: 100%; aspect-ratio: 1.38; border-radius: var(--radius-xl); object-fit: cover; filter: drop-shadow(0 26px 36px rgb(0 0 0 / 25%)); }
+.glow { position: absolute; inset: 18% 5%; border-radius: 50%; background: rgb(255 182 41 / 8%); filter: blur(40px); }
+.badge { position: absolute; right: 3%; bottom: 10%; display: flex; align-items: center; gap: .65rem; padding: .8rem 1rem; border: 1px solid rgb(255 255 255 / 14%); border-radius: var(--radius-md); background: rgb(29 34 36 / 94%); box-shadow: var(--shadow-float); font-size: var(--fs-xs); }
+.badge > span { display: grid; width: 36px; height: 36px; place-items: center; border-radius: 12px; background: rgb(255 182 41 / 14%); color: var(--color-brand); }
+.badge svg { width: 20px; height: 20px; }
+.visualLabel { position: absolute; top: 8%; right: 8%; color: rgb(255 255 255 / 9%); font-size: clamp(5rem, 14vw, 11rem); font-weight: 900; line-height: 1; letter-spacing: -.08em; pointer-events: none; }
+.visualLabel span { color: var(--color-brand); }
+.pulse { display: inline-block; width: 8px; height: 8px; margin-right: .55rem; border-radius: 50%; background: var(--color-whatsapp); box-shadow: 0 0 0 5px rgb(37 211 102 / 12%); vertical-align: 1px; }
+.bottomLine { position: absolute; right: 0; bottom: 0; left: 0; height: 1px; }
+.bottomLine > div { display: flex; height: 1px; background: var(--color-border); }
+.bottomLine span:first-child { width: 40%; background: var(--color-brand); }
+@media (max-width: 800px) { .inner { grid-template-columns: 1fr; }.visual { width: min(100%, 620px); margin: 0 auto; }.content { max-width: 650px; } }
+@media (max-width: 520px) { .hero { padding-top: 3rem; }.actions { display: grid; grid-template-columns: 1fr; }.visual { margin-top: -.5rem; }.badge { right: 0; bottom: 4%; padding: .55rem .7rem; }.badge > span { width: 30px; height: 30px; } }

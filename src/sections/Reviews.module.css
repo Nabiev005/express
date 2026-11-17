@@ -1,0 +1,18 @@
+.section { background: var(--color-ink-soft); }
+.section:focus { outline: none; }
+.slider { max-width: 800px; margin-inline: auto; }
+.card { position: relative; }
+.card > article { position: relative; z-index: 1; }
+.quoteMark { position: absolute; top: -3.2rem; right: 2.4rem; color: rgb(255 182 41 / 12%); font-family: Georgia, serif; font-size: 11rem; line-height: 1; }
+.controls { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1.5rem; }
+.counter { font-size: var(--fs-sm); font-weight: 800; }.counter i { color: var(--color-text-muted); font-style: normal; font-weight: 500; }
+.dots { display: flex; align-items: center; gap: .45rem; }
+.dots button { width: 8px; height: 8px; padding: 0; border-radius: 99px; background: #5b6364; cursor: pointer; transition: width var(--transition-base), background var(--transition-base); }
+.dots button.activeDot { width: 23px; background: var(--color-brand); }
+.buttons { display: flex; gap: .45rem; }
+.buttons button { display: grid; width: 40px; height: 40px; place-items: center; border: 1px solid var(--color-border); border-radius: 50%; background: transparent; color: var(--color-text); cursor: pointer; transition: border-color var(--transition-base), background var(--transition-base); }
+.buttons button:hover { border-color: var(--color-brand); background: rgb(255 182 41 / 12%); }
+.buttons svg { width: 18px; height: 18px; }
+.buttons button:first-child svg { transform: rotate(180deg); }
+.buttons button:last-child svg { width: 16px; height: 16px; }
+@media (max-width: 520px) { .controls { flex-wrap: wrap; }.dots { order: 3; width: 100%; justify-content: center; }.buttons { gap: .3rem; }.buttons button { width: 36px; height: 36px; } }
